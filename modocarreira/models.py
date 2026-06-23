@@ -22,7 +22,15 @@ class AnoJogador(database.Model):
     __tablename__ = "anojogador"
     id = database.Column(database.Integer, primary_key=True)
     ano = database.Column(database.Integer, nullable=False)
-    id_jogador = database.Column(database.Integer, database.ForeignKey("jogador.id"), nullable=False)
+    gols_temporada = database.Column(database.Integer, nullable=False)
+    assistencias_temporada = database.Column(database.Integer, nullable=False)
+    jogos_temporada = database.Column(database.Integer, nullable=False)
+    hathick_temporada = database.Column(database.Integer, nullable=False)
+    doublehathick_temporada = database.Column(database.Integer, nullable=False)
+    pentathick_temporada = database.Column(database.Integer, nullable=False)
+    hexathick_temporada = database.Column(database.Integer, nullable=False)
+    num_titulos_temporada = database.Column(database.Integer, nullable=False)
+    id_jogador_temporada = database.Column(database.Integer, database.ForeignKey("jogador.id"), nullable=False)
     titulos = database.relationship("TitulosJogador", backref="anojogador", lazy=True)
 
 

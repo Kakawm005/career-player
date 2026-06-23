@@ -40,6 +40,7 @@ def novojogador():
     return render_template("novacarreirajogador.html", form=form)
 
 
+
 @app.route("/carreirajogador/carregarcarreirajogador")
 def carregarjogador():
     jogadores = Jogador.query.all()

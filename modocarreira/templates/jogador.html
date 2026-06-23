@@ -9,19 +9,32 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <form method="POST">
-        {{ form.hidden_tag() }}
+    <article class="dados-jogador">
         <h2>Nome do jogador:</h2>
         <h1>{{ jogador.nome }}</h1>
-        <div>Idade: <input type="text" value="{{ jogador.idade }}" disabled></div>
-        <div>
-            Jogos: <input type="text" value="{{ jogador.jogos}}">
-            Gols: <input type="text" value="{{ jogador.gols }}">
-            Assistencias: <input type="text" value="{{ jogador.assistencias }}">
+        <div class="center margin-button">Idade: 
+            <input class="dados" type="text" value="{{ 2026 - jogador.idade.year }}" disabled>
+        </div>
+        <div class="margin-button">
+            Jogos: <input class="dados" type="text" value="{{ jogador.jogos}}" disabled>
+            Gols: <input class="dados" type="text" value="{{ jogador.gols }}" disabled>
+            Assistencias: <input class="dados" type="text" value="{{ jogador.assistencias }}" disabled>
+            Numero de Titulos: <input class="dados" type="text" value="{{ jogador.num_titulos }}" disabled>
         </div>        
-    </form>
+
+        <div class="margin-button">
+            Hathick: <input class="dados" type="text" value="{{ jogador.hathick }}" disabled>
+            Doublehathick: <input class="dados" type="text" value="{{ jogador.doublehathick }}" disabled>
+            Pentathick: <input class="dados" type="text" value="{{ jogador.pentathick }}" disabled>
+            Hexathick: <input class="dados" type="text" value="{{ jogador.hexathick }}" disabled>
+        </div>
+
+        <div class="margin-button">
+            <a href="{{ url_for('carregarjogador') }}" class="btn btn-danger">Voltar</a>
+            <a href="" class="btn btn-success">Adicionar Temporada</a>
+        </div>        
+    </article>
 
 
-    <a href="{{ url_for('carregarjogador') }}" class="btn btn-danger">Voltar</a>
 </body>
 </html>

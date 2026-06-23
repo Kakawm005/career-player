@@ -13,12 +13,16 @@
         <h1 class="tittle">Carregar Carreira</h1>
     </header>
     <ul class="list">
+    {% if jogadores%}
     {% for jogador in jogadores %}
         <div class="list-players button-background">
             <a href="{{url_for('jogador', jogador=jogador.nome)}}" class="btn btn-success btn-sm botao-entrar">Entrar</a>
             <a>Nome: {{ jogador.nome }} |  Idade: {{ 2026 - jogador.idade.year }}</a>
         </div>
     {% endfor %}
+    {% else %}    
+        <h4 class="margin-button">Não há jogadores</h4>
+    {% endif %}
     </ul>
     <a href="{{ url_for('carreirajogador') }}" class="btn btn-danger">Voltar</a>
 </body>
