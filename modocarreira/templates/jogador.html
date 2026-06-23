@@ -31,7 +31,7 @@
 
         <div class="margin-button">
             <a href="{{ url_for('carregarjogador') }}" class="btn btn-danger">Voltar</a>
-            <a href="" class="btn btn-success">Adicionar Temporada</a>
+            <a href="{{ url_for('temporada', jogador=jogador.nome) }}" class="btn btn-success">Adicionar Temporada</a>
         </div>        
     </article>
 

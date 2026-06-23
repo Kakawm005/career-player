@@ -6,7 +6,7 @@ from modocarreira.models import Jogador
 
 class FormNovoJogador(FlaskForm):
     nome = StringField("Nome", validators=[DataRequired()])
-    idade = DateField("Data de nascimento", validators=[DataRequired(),])
+    idade = DateField("Data de nascimento", validators=[DataRequired()])
     botao_confirmacao = SubmitField("Criar Carreira Jogador")
 
 def validate_nome(self, nome):
@@ -16,6 +16,7 @@ def validate_nome(self, nome):
     
 class FormTemporada(FlaskForm):
     gols = IntegerField("Gols", validators=[DataRequired()])
+    ano = IntegerField("Ano da Temporada", validators=[DataRequired()])
     assistencias = IntegerField("Assistencias", validators=[DataRequired()])
     jogos = IntegerField("Jogos", validators=[DataRequired()])
     hathick = IntegerField("Hathicks", validators=[DataRequired()])

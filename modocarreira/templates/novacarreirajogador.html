@@ -14,8 +14,10 @@
         <h1>Modo Carreira</h1>
         <div class="margin-button">{{ form.nome.label }} {{ form.nome() }}</div>
         <div class="margin-button">{{ form.idade.label }} {{ form.idade() }}</div>
-        <a type="submit" class="btn btn-success margin-button">{{ form.botao_confirmacao }}<a> 
-        <a href="{{ url_for('carreirajogador') }}" class="btn btn-danger margin-button">Voltar</a>
+        <div>
+            {{ form.botao_confirmacao(class="btn btn-success margin-button") }}
+            <a href="{{ url_for('carreirajogador') }}" class="btn btn-danger margin-button">Voltar</a>
+        </div>
     </form>
 </body>
 </html>

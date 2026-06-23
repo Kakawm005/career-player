@@ -1,4 +1,14 @@
-body .dados-jogador{
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color:rgb(226, 213, 197)
+}
+
+.dados-jogador{
     display: flex;
     flex-direction: column;
     justify-content: center;
